@@ -1,15 +1,24 @@
 public class Coche
 {	//Valores 
-	private int capacidadDeposito;
-	private int consumoPorKm;
+	private double capacidadDeposito;
+	private double cantidadActualDeposito;
+	private double consumoPorKm;
 	//Getters y setters
-	public int getCapacidadDeposito()
+	public double getCantidadActualDeposito()
 	{
-		return capacidadDeposito;
+		return this.cantidadActualDeposito;
 	}
-	public int getConsumoPorKm()
+	public double setCantidadActualDeposito(int valor)
 	{
-		return consumoPorKm;
+		return this.cantidadActualDeposito = valor;
+	}
+	public double getCapacidadDeposito()
+	{
+		return this.capacidadDeposito;
+	}
+	public double getConsumoPorKm()
+	{
+		return this.consumoPorKm;
 	}
 	public void setCapacidadDeposito(int valor)
 	{
@@ -17,11 +26,11 @@ public class Coche
 	}
 	public void setConsumoPorKm(int valor)
 	{
-		consumoPorKm= valor;
+		consumoPorKm = valor;
 	}
-	public double añadirCombustible(double combustible)
-	{
-		return capacidadDeposito += 5;
+	public static double aumentarCombustible(double combustible)
+	{	
+		return cantidadActualDeposito += combustible;
 	}
 	public void mostrarCantidadDeposito()
 	{
